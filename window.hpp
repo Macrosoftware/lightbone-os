@@ -25,5 +25,15 @@ class Window
                 y = _y;
             if ((_x + _cx) > 0 && (_x+ _cx) < 30)
                 cx = _cx;
+            if ((_y + _cy) > 0 && (_y + _cy) < 30)
+                cy = _cy;
+            free(caption);
+            if (caption)
+            {
+                caption = (char *) malloc(strlen(_caption) + 1);
+                caption = _caption;
+            }
+            else
+                caption = NULL;
         }
 };
