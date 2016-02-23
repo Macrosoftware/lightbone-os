@@ -19,7 +19,11 @@ class Window
     public:
         void operator()(short _x, short _y, short _cx, short _cy, char * _caption, Window * _parentwnd, char * _cornersch, char _captionlinechar, char _linesupchar)
         {
-            if (x < 30 && x > 0)
+            if (_x < 30 && _x > 0)
                 x = _x;
+            if (_y < 30 && _y > 0)
+                y = _y;
+            if ((_x + _cx) > 0 && (_x+ _cx) < 30)
+                cx = _cx;
         }
 };
