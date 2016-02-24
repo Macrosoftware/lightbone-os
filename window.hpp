@@ -36,4 +36,10 @@ class Window
             else
                 caption = NULL;
         }
+        for (int licz = 0; licz < 4; licz++)
+        {
+            cornersch[licz] = _cornersch[licz];
+        }
+        linesupchar = _linesupchar;
+        captionlinechar = _captionlinechar;
 };
